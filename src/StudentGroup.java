@@ -108,7 +108,16 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
-		for(int i=
+		String st;
+		for(int i=0;i<n;i++){
+			for(int j=i+1;j<n;j++){
+				if(students[i]>students[j]){
+					st=students[i];
+					students[i]=students[j];
+					students[j]=st;
+				}
+			}
+		}
 		// Add your implementation here
 	}
 
