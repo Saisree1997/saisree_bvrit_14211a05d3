@@ -12,7 +12,6 @@ import java.util.Date;
  *
  */
 public class StudentGroup implements StudentArrayOperation {
-	Scanner s=new Scanner(System.in);
 	private Student[] students;
 	
 	/**
@@ -26,12 +25,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		
-		if(students!=null){
-			students[i]=s.nextLine(); 
-		
+		if(students.length!=0){
+			return students;
 		else
-			throw new IllegalArgumentException("illegal argument");
-		}
 		return null;
 	}
 
@@ -42,12 +38,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
-      		if(index<0 || index>n){
-        	throw new ArrayIndexOutOfBoundsException("Index is out of bounds: "    + index);
-     		 }
-      		else
-       		 return students[index];
-	}
+      		}
 
 	@Override
 	public void setStudent(Student student, int index) {
@@ -103,16 +94,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
-		String st;
-		for(int i=0;i<n;i++){
-			for(int j=i+1;j<n;j++){
-				if(students[i]>students[j]){
-					st=students[i];
-					students[i]=students[j];
-					students[j]=st;
-				}
-			}
-		}
+		
 		// Add your implementation here
 	}
 
