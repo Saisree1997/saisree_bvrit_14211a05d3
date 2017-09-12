@@ -12,7 +12,7 @@ import java.util.Date;
  *
  */
 public class StudentGroup implements StudentArrayOperation {
-
+	Scanner s=new Scanner(System.in);
 	private Student[] students;
 	
 	/**
@@ -25,14 +25,19 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
-		for(int i=0;i<n;i++)
-			students[i]=s.nextLine(); 	
+		for(int i=0;i<n;i++){
+		if(students!=null){
+			students[i]=s.nextLine(); 
+		}
+		else
+			throw new IllegalArgumentException("illegal argument");
+		}
+		return null;
 	}
 
 	@Override
 	public void setStudents(Student[] students) {
 		this.students=students;
-		// Add your implementation here
 	}
 
 	@Override
@@ -40,10 +45,8 @@ public class StudentGroup implements StudentArrayOperation {
       		if(index<0 || index>n){
         	throw new ArrayIndexOutOfBoundsException("Index is out of bounds: "    + index);
      		 }
-     		 else
-        	return students[index];
-		// Add your implementation here
-		
+      		else
+       		 return students[index];
 	}
 
 	@Override
@@ -98,6 +101,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
+		for(int i=
 		// Add your implementation here
 	}
 
