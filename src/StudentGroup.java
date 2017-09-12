@@ -66,6 +66,10 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void add(Student student, int index) {
+		for(int i=n-1;i>=index-1;i--){
+			students[i+1]=students[i];
+		}
+		students[index-1]=student;
 		// Add your implementation here
 	}
 
