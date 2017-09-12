@@ -26,9 +26,7 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getStudents() {
 		for(int i=0;i<n;i++)
-			students[i]=s.nextLine(); 
-		// Add your implementation here
-		return null;
+			students[i]=s.nextLine(); 	
 	}
 
 	@Override
@@ -39,8 +37,13 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
+      		if(index<0 || index>n){
+        	throw new ArrayIndexOutOfBoundsException("Index is out of bounds: "    + index);
+     		 }
+     		 else
+        	return students[index];
 		// Add your implementation here
-		return null;
+		
 	}
 
 	@Override
